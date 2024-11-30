@@ -6,9 +6,12 @@
 
 from SimConnect import *
 from com_managment import ComRadio
+from serial_interface import init_serial, get_commands
 from time import sleep
 
 def main():
+    init_serial()
+
     try:
         msfs2020 = SimConnect()
     except ConnectionError:
@@ -22,8 +25,14 @@ def main():
 
     while True:
         print(radio.get_active_freq(1))
-        radio.inc_freq(1)
-        sleep(1)
+        commands = get_commands()
+        if (commands != []):
+            print(commands)
+
+        if(b"EVENT_RADIO_1_SWAP_ACTIVE\r\n" in commands):
+            print("increased frequency")
+            radio.inc_freq(1)
+        sleep(0.5)
 
 if __name__ == "__main__":
     main()
