@@ -1,4 +1,4 @@
-/** 
+/**
  * @file event.hpp
  * @author Jack Duignan (JackpDuignan@gmail.com)
  * @date 2024-12-01
@@ -15,17 +15,26 @@
 #include <stdbool.h>
 
 typedef enum {
-    EMPTY,
-    RADIO_1_SWAP_ACTIVE
+    EVENT_EMPTY,
+    EVENT_RADIO_1_SWAP_ACTIVE,
+    EVENT_COUNT
 } eventID_t;
 
-/** 
+/**
  * @brief Add an event to the transmit queue
  * @param eventID the ID of the event to send
- * 
+ *
  * @return 0 if successful
  */
 int event_add(eventID_t eventID);
+
+/**
+ * @brief Transmit all events in the queue
+ *
+ * @return 0 if successful
+ */
+int event_transmit(void);
+
 
 
 #endif // EVENT_HPP
