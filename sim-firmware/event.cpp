@@ -16,7 +16,7 @@
 #define EVENT_QUEUE_SIZE 100
 
 
-char* eventMsgs[EVENT_COUNT] = {"EMPTY", "EVENT_RADIO_1_SWAP_ACTIVE"};
+char* eventMsgs[EVENT_COUNT] = { "EMPTY", "EVENT_RADIO_1_SWAP_ACTIVE" };
 
 eventID_t eventQueue[EVENT_QUEUE_SIZE] = { EVENT_EMPTY };
 
@@ -45,7 +45,7 @@ int event_transmit(void) {
         } else {
             Serial.println(eventMsgs[eventQueue[i]]);
             eventQueue[i] = EVENT_EMPTY;
-        } 
+        }
     }
 
     return 0;
