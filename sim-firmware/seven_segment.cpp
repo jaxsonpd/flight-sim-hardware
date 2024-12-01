@@ -73,3 +73,36 @@ void SevenSegment::point(bool enable) {
         _shiftReg &= ~(1);
     }
 }
+
+MultiSevenSegment::MultiSevenSegment(MultiSevenSegmentConfig config) {
+    _serialPin = config.serialPin;
+    _serialClockPin = config.serialClockPin;
+    _digit1Pin = config.digit1Pin;
+    _digit2Pin = config.digit2Pin;
+    _digit3Pin = config.digit3Pin;
+    _digit4Pin = config.digit4Pin;
+
+    _digits[0] = new SevenSegment(_serialPin, _serialClockPin);
+    _digits[1] = new SevenSegment(_serialPin, _serialClockPin);
+    _digits[2] = new SevenSegment(_serialPin, _serialClockPin);
+    _digits[3] = new SevenSegment(_serialPin, _serialClockPin);
+}
+
+MultiSevenSegment::~MultiSevenSegment() {
+
+}
+
+void MultiSevenSegment::write(uint16_t number) {
+    (*_digits[0]).write(number & (0xF000));
+    (*_digits[1]).write(number & (0x0F00));
+    (*_digits[2]).write(number & (0x00F0));
+    (*_digits[3]).write(number & (0x000F));
+}
+
+void MultiSevenSegment::update(void) {
+    for (size_t i = 0; i < 4; i++)
+    {
+        (*_digits[1]).update();
+    }
+    
+}

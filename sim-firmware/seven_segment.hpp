@@ -12,6 +12,7 @@
 #include <stdint.h>
 #include <stdbool.h>
 
+
 class SevenSegment {
 private:
     uint8_t _shiftReg; // The shift register value to output
@@ -54,5 +55,43 @@ public:
     ~SevenSegment();
 };
 
+struct MultiSevenSegmentConfig
+{
+    uint8_t serialPin;
+    uint8_t serialClockPin;
+    uint8_t digit1Pin;
+    uint8_t digit2Pin;
+    uint8_t digit3Pin;
+    uint8_t digit4Pin;
+};
+
+
+class MultiSevenSegment
+{
+private:
+    SevenSegment* _digits[4];
+    uint8_t _serialPin;
+    uint8_t _serialClockPin;
+    uint8_t _digit1Pin;
+    uint8_t _digit2Pin;
+    uint8_t _digit3Pin;
+    uint8_t _digit4Pin;
+public:
+    MultiSevenSegment(MultiSevenSegmentConfig config);
+    ~MultiSevenSegment();
+
+    /** 
+     * @brief Write a number to the 4 digits
+     * @param number the number to write
+     *
+     */
+    void write(uint16_t number);
+
+    /** 
+     * @brief Update the display
+     * 
+     */
+    void update(void);
+};
 
 #endif // SEGMENT_HPP
