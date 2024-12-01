@@ -100,9 +100,17 @@ void MultiSevenSegment::write(uint16_t number) {
 }
 
 void MultiSevenSegment::update(void) {
-    for (size_t i = 0; i < 4; i++)
-    {
-        (*_digits[1]).update();
-    }
+    digitalWrite(_digit1Pin, HIGH);
+    (*_digits[0]).update();
+    digitalWrite(_digit1Pin, LOW);
+    digitalWrite(_digit2Pin, HIGH);
+    (*_digits[1]).update();
+    digitalWrite(_digit2Pin, LOW);
+    digitalWrite(_digit3Pin, HIGH);
+    (*_digits[2]).update();
+    digitalWrite(_digit3Pin, LOW);
+    digitalWrite(_digit4Pin, HIGH);
+    (*_digits[3]).update();
+    digitalWrite(_digit4Pin, LOW);
     
 }
