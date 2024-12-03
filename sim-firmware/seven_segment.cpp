@@ -93,10 +93,10 @@ MultiSevenSegment::~MultiSevenSegment() {
 }
 
 void MultiSevenSegment::write(uint16_t number) {
-    (*_digits[0]).write(number & (0xF000));
-    (*_digits[1]).write(number & (0x0F00));
-    (*_digits[2]).write(number & (0x00F0));
-    (*_digits[3]).write(number & (0x000F));
+    (*_digits[0]).write(number / 1000);
+    (*_digits[1]).write((number / 100) % 10);
+    (*_digits[2]).write((number / 10) % 10);
+    (*_digits[3]).write(number % 10);
 }
 
 void MultiSevenSegment::update(void) {
