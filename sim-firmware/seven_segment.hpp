@@ -18,7 +18,7 @@ private:
     uint8_t _shiftReg; // The shift register value to output
     uint8_t _serialPin; // The pin for the serial input of the shift register
     uint8_t _serialClockPin; // The pin for the clock of the shift register
-    bool _point; // Wether the decimal point is enabled.
+    bool _point = false; // Wether the decimal point is enabled.
 public:
     /** 
      * @brief Initialise the seven segment display

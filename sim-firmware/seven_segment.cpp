@@ -82,6 +82,14 @@ MultiSevenSegment::MultiSevenSegment(MultiSevenSegmentConfig config) {
     _digit3Pin = config.digit3Pin;
     _digit4Pin = config.digit4Pin;
 
+    pinMode(_serialPin, OUTPUT);
+    pinMode(_serialClockPin, OUTPUT);
+    pinMode(_digit1Pin, OUTPUT);
+    pinMode(_digit2Pin, OUTPUT);
+    pinMode(_digit3Pin, OUTPUT);
+    pinMode(_digit4Pin, OUTPUT);
+
+
     _digits[0] = new SevenSegment(_serialPin, _serialClockPin);
     _digits[1] = new SevenSegment(_serialPin, _serialClockPin);
     _digits[2] = new SevenSegment(_serialPin, _serialClockPin);
@@ -100,17 +108,24 @@ void MultiSevenSegment::write(uint16_t number) {
 }
 
 void MultiSevenSegment::update(void) {
-    digitalWrite(_digit1Pin, HIGH);
-    (*_digits[0]).update();
     digitalWrite(_digit1Pin, LOW);
-    digitalWrite(_digit2Pin, HIGH);
-    (*_digits[1]).update();
+    (*_digits[0]).update();
+    delay(2);
+    digitalWrite(_digit1Pin, HIGH);
+
     digitalWrite(_digit2Pin, LOW);
-    digitalWrite(_digit3Pin, HIGH);
-    (*_digits[2]).update();
+    (*_digits[1]).update();
+    delay(2);
+    digitalWrite(_digit2Pin, HIGH);
+
     digitalWrite(_digit3Pin, LOW);
-    digitalWrite(_digit4Pin, HIGH);
-    (*_digits[3]).update();
+    (*_digits[2]).update();
+    delay(2);
+    digitalWrite(_digit3Pin, HIGH);
+
     digitalWrite(_digit4Pin, LOW);
+    (*_digits[3]).update();
+    delay(2);
+    digitalWrite(_digit4Pin, HIGH);
     
 }
