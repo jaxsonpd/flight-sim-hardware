@@ -1,0 +1,20 @@
+(kicad_sch
+	(version 20231120)
+	(generator "eeschema")
+	(generator_version "8.0")
+	(uuid "c68fcb65-563a-491a-8fc4-6888503342b0")
+	(paper "A4")
+	(title_block
+		(title "Main Radio Panel")
+		(date "2024-12-03")
+		(rev "1")
+		(company "Hunter Inc")
+		(comment 1 "JD")
+	)
+	(lib_symbols)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+)
