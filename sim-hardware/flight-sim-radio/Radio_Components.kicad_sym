@@ -24,7 +24,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "radio_footprints:FJ3661AH-DIP22"
 			(at 0 0 0)
 			(effects
 				(font

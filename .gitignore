@@ -37,3 +37,6 @@ fp-info-cache
 *.out
 *.hex
 build/
+
+# Freecad
+*.FCBak
