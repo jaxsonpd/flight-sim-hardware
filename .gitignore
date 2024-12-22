@@ -21,6 +21,12 @@ fp-info-cache
 ~*.lck
 \#auto_saved_files#
 
+*.zip
+*.gbrjob
+*.gbr
+*.drl
+*.tar.gz
+
 # Netlist files (exported from Eeschema)
 *.net
 

@@ -113,9 +113,9 @@
 			(subtractmaskfromsilk no)
 			(outputformat 1)
 			(mirror no)
-			(drillshape 1)
+			(drillshape 0)
 			(scaleselection 1)
-			(outputdirectory "")
+			(outputdirectory "/home/jaxsonpd/Documents/flight-sim-hardware/sim-hardware/flight-sim-radio/Fab1/")
 		)
 	)
 	(net 0 "")
@@ -1352,7 +1352,7 @@
 		(descr "CP, Radial series, Radial, pin pitch=2.50mm, , diameter=8mm, Electrolytic Capacitor")
 		(tags "CP Radial series Radial pin pitch 2.50mm  diameter 8mm Electrolytic Capacitor")
 		(property "Reference" "C5"
-			(at 1.25 -5.25 360)
+			(at 1.25 -5.25 0)
 			(layer "F.SilkS")
 			(uuid "146457f6-e8b7-4f91-908d-ac19fe1d8f86")
 			(effects
@@ -1363,7 +1363,7 @@
 			)
 		)
 		(property "Value" "100uF"
-			(at 1.25 5.25 360)
+			(at 1.25 5.25 0)
 			(layer "F.Fab")
 			(uuid "730528f9-dcc7-4812-b2bd-f2fe82b0cf8e")
 			(effects
@@ -3041,7 +3041,7 @@
 			(uuid "e5f5719d-3eba-4ead-be58-8635b0ab5ca0")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 1.25 0 360)
+			(at 1.25 0 0)
 			(layer "F.Fab")
 			(uuid "e6ff69d3-8db4-42b1-8808-8743b098f77b")
 			(effects
@@ -5700,7 +5700,7 @@
 		(descr "Resistor, Axial_DIN0414 series, Axial, Horizontal, pin pitch=15.24mm, 2W, length*diameter=11.9*4.5mm^2, http://www.vishay.com/docs/20128/wkxwrx.pdf")
 		(tags "Resistor Axial_DIN0414 series Axial Horizontal pin pitch 15.24mm 2W length 11.9mm diameter 4.5mm")
 		(property "Reference" "R1"
-			(at 7.62 3.5 360)
+			(at 7.62 3.5 0)
 			(layer "F.SilkS")
 			(uuid "d3bef6e4-abd9-4d62-89df-11d5502fb8bf")
 			(effects
@@ -5711,7 +5711,7 @@
 			)
 		)
 		(property "Value" "1k"
-			(at 7.62 3.37 360)
+			(at 7.62 3.37 0)
 			(layer "F.Fab")
 			(uuid "7a3585fa-04ce-46ad-9fa5-9cbc46c726e1")
 			(effects
@@ -5926,7 +5926,7 @@
 			(uuid "ab3ec5de-e8f9-4c90-a14c-1457d0c204c7")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 7.62 0 360)
+			(at 7.62 0 0)
 			(layer "F.Fab")
 			(uuid "8fc4424a-ad4f-4d89-a545-063b986f6a0c")
 			(effects
@@ -6843,9 +6843,9 @@
 		(descr "8 position rotary switch")
 		(tags "8 positon rotarty switch")
 		(property "Reference" "SW2"
-			(at -4 -5.5 360)
+			(at -4 -5.5 0)
 			(layer "F.SilkS")
-			(uuid "44cc74d6-f88c-4305-a8ca-2ec54b28f248")
+			(uuid "38c5f68c-d2c2-4d07-9e4b-3beadae8b0dd")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6854,9 +6854,9 @@
 			)
 		)
 		(property "Value" "RS-08 300±150GF"
-			(at -5.54 -6.5 360)
+			(at -5.54 -6.5 0)
 			(layer "F.Fab")
-			(uuid "bfd23cda-0e3c-4154-81a9-d183b2fd7579")
+			(uuid "7691c52c-b117-458c-a5de-8b704adc0432")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6865,10 +6865,10 @@
 			)
 		)
 		(property "Footprint" "radio_footprints:SW-TH_RS-08-300-150GF"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "ed16c3aa-d3be-4bd5-9ceb-e8f51f7cb00b")
+			(uuid "37ae6afa-2dce-4a03-963e-76140dcaf025")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6877,10 +6877,10 @@
 			)
 		)
 		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2408201506_HOOYA-RS-08-300-150gf_C41347715.pdf"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "3733751e-51ff-47af-8cc6-c3624f828cba")
+			(uuid "4f43642c-9fb1-4341-bc00-fccef23446f9")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6889,10 +6889,34 @@
 			)
 		)
 		(property "Description" "8 position rotary switch"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "7d9d4a7a-23c3-428d-a2ce-a85e00e03818")
+			(uuid "2ba07e4e-2a04-447c-a598-e3d91856b9a9")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "JLC_3DModel" "c87ffa4e2940439c8617e6272985ffea"
+			(at 0 0 0)
+			(layer "Cmts.User")
+			(hide yes)
+			(uuid "c6c351f7-831b-44d8-8211-df4399490040")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "JLC_3D_Size" "9.2 9.828"
+			(at 0 0 0)
+			(layer "Cmts.User")
+			(hide yes)
+			(uuid "634bb7ba-771b-446b-9f2c-8e16442db536")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6963,7 +6987,7 @@
 				(type default)
 			)
 			(layer "F.SilkS")
-			(uuid "86a88418-274d-48a7-92bf-0703b43b12a9")
+			(uuid "7e2c4728-df36-4565-a6a9-06c7b575d606")
 		)
 		(fp_line
 			(start 0.7621 -5.334)
@@ -6973,7 +6997,7 @@
 				(type default)
 			)
 			(layer "F.SilkS")
-			(uuid "0fa193ad-4a62-460b-b7e2-d8669b042114")
+			(uuid "0c7f1794-83c6-4fa3-90b4-224906a20f4a")
 		)
 		(fp_line
 			(start 0.7621 -4.572)
@@ -6983,7 +7007,7 @@
 				(type default)
 			)
 			(layer "F.SilkS")
-			(uuid "004120ff-a3c6-459d-bc1a-42d6b587a58c")
+			(uuid "bfd65ded-ca43-4154-abbe-2607ed9ab66f")
 		)
 		(fp_circle
 			(center 0 0)
@@ -6994,7 +7018,7 @@
 			)
 			(fill none)
 			(layer "F.SilkS")
-			(uuid "aa33d975-2959-412b-a358-eaf35ddc8328")
+			(uuid "7bac454e-1726-4c25-b803-66053d3fa133")
 		)
 		(fp_circle
 			(center 4.7269 -4.7269)
@@ -7005,7 +7029,7 @@
 			)
 			(fill none)
 			(layer "User.5")
-			(uuid "00bda19d-dfc1-4578-8ab8-ff8fe2b08560")
+			(uuid "6ac55eed-782a-4fac-a409-310959990045")
 		)
 		(pad "1" thru_hole oval
 			(at 1.796 -1.796)
@@ -7018,7 +7042,7 @@
 			(pintype "output")
 			(solder_mask_margin 0.05)
 			(thermal_bridge_angle 0)
-			(uuid "2c19993a-3478-4d6b-92d5-eb400a0e0ac0")
+			(uuid "41f5a25c-72f2-4b4f-9b67-984d1278ae94")
 		)
 		(pad "2" thru_hole oval
 			(at 2.54 0)
@@ -7031,7 +7055,7 @@
 			(pintype "output")
 			(solder_mask_margin 0.05)
 			(thermal_bridge_angle 0)
-			(uuid "542adc77-6855-4d5f-9c58-13826eccd7dc")
+			(uuid "2f55d3cf-5a72-495c-82ff-865c05a2436c")
 		)
 		(pad "3" thru_hole oval
 			(at 1.796 1.796)
@@ -7044,7 +7068,7 @@
 			(pintype "output")
 			(solder_mask_margin 0.05)
 			(thermal_bridge_angle 0)
-			(uuid "6508b922-7de8-4981-be4c-085e1c31bbe9")
+			(uuid "539c8cd7-846e-42af-95bc-3df6ab4ec859")
 		)
 		(pad "4" thru_hole oval
 			(at 0 2.54)
@@ -7057,7 +7081,7 @@
 			(pintype "output")
 			(solder_mask_margin 0.05)
 			(thermal_bridge_angle 0)
-			(uuid "dae975ea-9a80-4834-a07a-b998a823ca07")
+			(uuid "db63ca93-4a3e-4fdc-bf17-a1f9afeaf08d")
 		)
 		(pad "5" thru_hole oval
 			(at -1.796 1.796)
@@ -7070,7 +7094,7 @@
 			(pintype "output")
 			(solder_mask_margin 0.05)
 			(thermal_bridge_angle 0)
-			(uuid "2690abff-be49-4ba2-9746-732b94eb196a")
+			(uuid "f555826a-7b97-409c-96c7-187c4d48986b")
 		)
 		(pad "6" thru_hole oval
 			(at -2.54 0)
@@ -7083,7 +7107,7 @@
 			(pintype "output")
 			(solder_mask_margin 0.05)
 			(thermal_bridge_angle 0)
-			(uuid "4bc9dd3e-fa65-4f71-abc7-14be841f0215")
+			(uuid "0fbcb589-a7a4-4f49-97df-b3e939791b86")
 		)
 		(pad "7" thru_hole oval
 			(at -1.796 -1.796)
@@ -7096,7 +7120,7 @@
 			(pintype "output")
 			(solder_mask_margin 0.05)
 			(thermal_bridge_angle 0)
-			(uuid "a47b7771-fb04-42ee-948d-d9dee940aa36")
+			(uuid "2034fcfa-7bb5-481d-9941-299bc27ffd05")
 		)
 		(pad "C" thru_hole oval
 			(at 0 -2.54)
@@ -7109,13 +7133,13 @@
 			(pintype "power_in")
 			(solder_mask_margin 0.0508)
 			(thermal_bridge_angle 0)
-			(uuid "dff610c6-d52c-4c37-adea-d8de2fc9c97a")
+			(uuid "951a5f59-41bd-4f49-b4ec-74b8bff1bc3a")
 		)
 		(zone
 			(net 0)
 			(net_name "")
 			(layer "Dwgs.User")
-			(uuid "cc7a5529-7238-4d53-9433-c526d91d175f")
+			(uuid "42843f3d-2415-49c4-9c89-6821c5a74dbf")
 			(hatch edge 0.5)
 			(priority 100)
 			(connect_pads yes
@@ -7184,7 +7208,7 @@
 			(net 0)
 			(net_name "")
 			(layer "User.3")
-			(uuid "0ae971df-4c49-43cf-ae47-7a45c2c829c8")
+			(uuid "e4e9dfbd-db2e-441f-8d02-bc90b43a8920")
 			(hatch edge 0.5)
 			(priority 100)
 			(connect_pads yes
@@ -7231,7 +7255,7 @@
 			(net 0)
 			(net_name "")
 			(layer "User.4")
-			(uuid "b8aab4d6-da04-4cb6-8676-150ad869dd57")
+			(uuid "4b7f6c8b-19dc-4587-8b48-6fe4eaa42e18")
 			(hatch edge 0.5)
 			(priority 100)
 			(connect_pads yes
@@ -7260,7 +7284,7 @@
 			(net 0)
 			(net_name "")
 			(layer "User.4")
-			(uuid "47d24b4b-3836-4649-ba4c-fda8cf286b39")
+			(uuid "8ffc5794-4ba2-409d-a1cb-dc5a29b8895c")
 			(hatch edge 0.5)
 			(priority 100)
 			(connect_pads yes
@@ -7289,7 +7313,7 @@
 			(net 0)
 			(net_name "")
 			(layer "User.4")
-			(uuid "d791f0ab-ff5d-4c03-b396-20a0b59d14e5")
+			(uuid "bffe3368-f7b9-4cfb-b905-8282696739b4")
 			(hatch edge 0.5)
 			(priority 100)
 			(connect_pads yes
@@ -7318,7 +7342,7 @@
 			(net 0)
 			(net_name "")
 			(layer "User.4")
-			(uuid "3b55b8b4-6e6d-4053-9637-8a90a64242cb")
+			(uuid "de920237-0c03-4821-b535-a9013954032f")
 			(hatch edge 0.5)
 			(priority 100)
 			(connect_pads yes
@@ -7347,7 +7371,7 @@
 			(net 0)
 			(net_name "")
 			(layer "User.4")
-			(uuid "ca77a7a1-dc0b-45d2-9b8e-e5f6fe5b4974")
+			(uuid "35165b6d-1f1c-47f8-a0cf-af23c77380ab")
 			(hatch edge 0.5)
 			(priority 100)
 			(connect_pads yes
@@ -7376,7 +7400,7 @@
 			(net 0)
 			(net_name "")
 			(layer "User.4")
-			(uuid "def2b145-1dea-41d1-87b5-c6c71022a461")
+			(uuid "e6b1ce4f-bc3a-4179-a497-5cb34dc2913b")
 			(hatch edge 0.5)
 			(priority 100)
 			(connect_pads yes
@@ -7405,7 +7429,7 @@
 			(net 0)
 			(net_name "")
 			(layer "User.4")
-			(uuid "dc5c6c2e-11b6-4f04-bf57-621638b3507d")
+			(uuid "860f95b1-f5f8-422b-aacf-52c7c91b1bd3")
 			(hatch edge 0.5)
 			(priority 100)
 			(connect_pads yes
@@ -7434,7 +7458,7 @@
 			(net 0)
 			(net_name "")
 			(layer "User.4")
-			(uuid "e64a3299-8cb0-4b59-9aa6-15b70310a9d9")
+			(uuid "a4687639-9a8a-49fd-a80d-1a1044075661")
 			(hatch edge 0.5)
 			(priority 100)
 			(connect_pads yes
@@ -9491,7 +9515,7 @@
 		(descr "Resistor, Axial_DIN0414 series, Axial, Horizontal, pin pitch=15.24mm, 2W, length*diameter=11.9*4.5mm^2, http://www.vishay.com/docs/20128/wkxwrx.pdf")
 		(tags "Resistor Axial_DIN0414 series Axial Horizontal pin pitch 15.24mm 2W length 11.9mm diameter 4.5mm")
 		(property "Reference" "R5"
-			(at 7.62 3.5 360)
+			(at 7.62 3.5 0)
 			(layer "F.SilkS")
 			(uuid "cf6c8d0d-60e8-4b1e-a984-3a340e4a660a")
 			(effects
@@ -9502,7 +9526,7 @@
 			)
 		)
 		(property "Value" "1k"
-			(at 7.62 3.37 360)
+			(at 7.62 3.37 0)
 			(layer "F.Fab")
 			(uuid "cd1a1bbf-6e90-44e5-a386-b562a48e2814")
 			(effects
@@ -9717,7 +9741,7 @@
 			(uuid "e38cfdc0-10c5-42b9-a01c-a479abb40211")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 7.62 0 360)
+			(at 7.62 0 0)
 			(layer "F.Fab")
 			(uuid "f311bd7c-f1f7-49b3-99c5-adecd9bf0320")
 			(effects
@@ -11452,7 +11476,7 @@
 			(uuid "a2a1e8f9-fa1e-455a-a7b5-c27e90eeef9e")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 -10.16 360)
+			(at 0 -10.16 0)
 			(layer "B.Fab")
 			(uuid "6c6916e0-c18f-4af3-9299-95c5a4b7c328")
 			(effects
