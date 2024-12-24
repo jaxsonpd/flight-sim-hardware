@@ -567,15 +567,15 @@
 			)
 		)
 	)
-	(model "${KIPRJMOD}/EASYEDA_MODELS/SW-TH_RS-08-300-150GF.step"
+	(model "${KIPRJMOD}/3D-Parts/HOOYA RS-08 300-150gf-Body.step"
 		(offset
-			(xyz -0 0.325 -3)
+			(xyz 0 0 0)
 		)
 		(scale
 			(xyz 1 1 1)
 		)
 		(rotate
-			(xyz -0 -0 0)
+			(xyz 0 0 0)
 		)
 	)
 )
