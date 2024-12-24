@@ -9,7 +9,7 @@
 		(date "2024-12-03")
 		(rev "1")
 		(company "Hunter Inc")
-		(comment 1 "JD")
+		(comment 1 "J. DUIGNAN")
 	)
 	(lib_symbols
 		(symbol "74xx:74LS148"
