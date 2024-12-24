@@ -110,10 +110,10 @@
 #	(condition "A.Reference == 'U1'")
 #	(severity error))
 
-# Track width
+# Track width min possible is 0.09mm
 (rule "Track width and clearance min"
-	(constraint track_width (min 0.09mm) (opt 0.2mm))
-	(constraint clearance (min 0.09mm) (opt 0.2mm))
+	(constraint track_width (min 0.2mm) (opt 0.2mm))
+	(constraint clearance (min 0.2mm) (opt 0.2mm))
 	(condition "A.Type == 'Track'")
 	(severity error))
 
