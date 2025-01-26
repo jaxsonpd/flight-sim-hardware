@@ -2181,31 +2181,22 @@
 		(in_bom yes)
 		(on_board yes)
 		(property "Reference" "U"
-			(at 0 -0.254 0)
+			(at 0 2.286 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" ""
-			(at -1.27 -7.62 0)
+		(property "Value" "TM1638"
+			(at 3.048 0.254 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" ""
-			(at -1.27 -7.62 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
+		(property "Footprint" "radio_footprints:TM1638"
 			(at -1.27 -7.62 0)
 			(effects
 				(font
@@ -2214,8 +2205,26 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Datasheet" "https://www.makerhero.com/img/files/download/TM1638-Datasheet.pdf"
 			(at -1.27 -7.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "7 Segment display driver"
+			(at -1.27 -7.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_keywords" "7 Segment Display"
+			(at 0 0 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2387,7 +2396,7 @@
 				)
 			)
 			(pin power_in line
-				(at 20.955 1.905 270)
+				(at 20.32 1.27 270)
 				(length 2.54)
 				(name "GND"
 					(effects
@@ -2531,7 +2540,7 @@
 				)
 			)
 			(pin input line
-				(at 23.495 1.905 270)
+				(at 22.86 1.27 270)
 				(length 2.54)
 				(name "GND"
 					(effects
@@ -2739,6 +2748,16 @@
 				)
 				(fill
 					(type none)
+				)
+			)
+		)
+		(symbol "TM1638_1_1"
+			(text "TM1638"
+				(at 16.256 -9.906 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
 				)
 			)
 		)
