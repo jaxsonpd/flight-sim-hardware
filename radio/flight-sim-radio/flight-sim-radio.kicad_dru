@@ -1,0 +1,136 @@
+# custom design rules version
+(version 1)
+
+# ========= JLCPCB constraints for 6 layer boards ========
+# Drill hole size min max
+(rule "Drill hole min"
+	(constraint hole_size (min 0.15mm) (min 6.3mm))
+	(severity error))
+
+# Min via size 0.3 normal then $20USD for 0.25 or 0.2 then more for 0.15
+(rule "Via hole size min"
+	(constraint hole_size (min 0.2mm))
+	(condition "A.Type == 'Via'")
+	(severity error))
+
+# PTH size 0.2 - 6.35 with a 0.15 annular ring
+(rule "PTH hole size min"
+	(constraint hole_size (min 0.2mm) (max 6.3mm))
+	(condition "A.Pad_Type == 'Through-hole'")
+	(severity error))
+
+# Pad size min
+#(rule "Pad size min"
+#	(constraint length (min 1.0mm))
+#	(condition "A.Type == 'Pad'")
+#	(severity error))
+
+# Min Non-plated hole
+(rule "Max Drill Hole Size Mechanical"
+    (constraint hole_size (min 0.5mm))
+    (condition "A.Pad_Type == 'NPTH, mechanical'"))
+
+# PTH annular ring size min
+(rule "PTH annular ring size"
+	(constraint annular_width (min 0.15mm))
+	(condition "A.Pad_Type == 'Through-hole'")
+	(severity error))
+
+# Plated slot minimum
+(rule "Plated slot size"
+    (constraint hole_size (min 0.5mm))
+    (condition "A.isPlated() && A.Hole_Size_X != A.Hole_Size_Y"))
+
+# Min via annular ring width
+(rule "Via annular ring min"
+	(constraint annular_width (min 0.05mm))
+	(condition "A.Type == 'Via'")
+	(severity error))
+
+# Hole to Hole not vias
+(rule "Hole to Hole clearanace different nets"
+	(constraint hole_to_hole (min 0.5mm))
+	(condition "A.Net != B.Net")
+	(severity error))
+
+# Via to Via clearnace same net
+(rule "Via to Via clearance same net"
+	(constraint hole_to_hole (min 0.254mm))
+	(condition "A.Type == 'Via' && B.Type == 'Via' && A.Net == B.Net")
+	(severity error))
+
+# Pad to Pad clearance (pad without hole, different net))
+(rule "Pad to Pad clearance"
+	(constraint clearance (min 0.127mm))
+	(condition "A.Net != B.Net")
+	(condition "A.Pad_Type == 'SMD' && B.Pad_Type == 'SMD'")
+	(severity error))
+
+# Pad to Pad clearance (pad with hole) same as hole to hole clearance
+(rule "Pad to Pad clearance TH"
+	(constraint clearance (min 0.5mm))
+	(condition "A.Net != B.Net")
+	(condition "A.Pad_Type == 'Through-hole' && B.Pad_Type == 'SMD'")
+	(severity error))
+
+# Via to Track
+(rule "Via Hole to Track Clearance"
+    (constraint hole_clearance (min 0.254mm))
+    (condition "A.Type == 'Via' && B.Type == 'Track'")
+	(severity error))
+
+# PTH to Track
+(rule "PTH to track clearance"
+	(constraint clearance (min 0.33mm))
+	(condition "A.Pad_Type == 'Through-hole' && B.Type == 'Track'")
+	(severity error))
+
+# NPTH to Track
+(rule "NPTH to track clearance"
+	(constraint clearance (min 0.33mm))
+	(condition "A.Pad_Type == 'NPTH, mechanical' && B.Type == 'Track'")
+	(severity error))
+
+# Pad to Track # 0.2 normally
+(rule "Pad to track clearance"
+	(constraint clearance (min 0.2mm))
+	(condition "A.Pad_Type == 'SMD' && B.Type == 'Track'")
+	(condition "A.Reference != 'U1'")
+	(severity error))
+
+# Pad to Track # 0.1 for bga and other special senarios
+(rule "BGA neckdown"
+   (constraint track_width (min 0.09mm) (opt 0.1mm))
+   (constraint clearance (min 0.09mm) (opt 0.1mm))
+   (condition "A.intersectsCourtyard('U1')"))
+
+#(rule "Pad to track clearance"
+#	(constraint clearance (min 0.1mm))
+#	(condition "A.Pad_Type == 'SMD' && B.Type == 'Track'")
+#	(condition "A.Reference == 'U1'")
+#	(severity error))
+
+# Track width min possible is 0.09mm
+(rule "Track width and clearance min"
+	(constraint track_width (min 0.2mm) (opt 0.2mm))
+	(constraint clearance (min 0.2mm) (opt 0.2mm))
+	(condition "A.Type == 'Track'")
+	(severity error))
+
+# Silkscreen size still to do
+(rule "Silkscreen size"
+	(constraint text_height (min 1mm))
+	(constraint text_thickness (min 0.15mm))
+	(layer "F.Silkscreen")
+	(layer "B.Silkscreen")
+	(severity error))
+
+
+# Enforce a mechanical clearance between components and board edge
+(rule front_mechanical_board_edge_clearance
+    (layer "F.Courtyard")
+    (constraint physical_clearance (min 0.3mm))
+    (condition "B.Layer == 'Edge.Cuts'")
+	(severity error))
+
+	

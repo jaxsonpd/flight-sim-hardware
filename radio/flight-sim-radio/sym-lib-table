@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "Radio_Components")(type "KiCad")(uri "${KIPRJMOD}/Radio_Components.kicad_sym")(options "")(descr ""))
+)
