@@ -483,7 +483,7 @@
       "gencad": "",
       "idf": "",
       "netlist": "",
-      "plot": "/home/jaxsonpd/Documents/flight-sim-hardware/sim-hardware/flight-sim-radio/Fab1/",
+      "plot": "fab1/",
       "pos_files": "",
       "specctra_dsn": "",
       "step": "",

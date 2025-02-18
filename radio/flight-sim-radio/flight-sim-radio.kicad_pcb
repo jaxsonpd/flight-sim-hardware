@@ -115,7 +115,7 @@
 			(mirror no)
 			(drillshape 0)
 			(scaleselection 1)
-			(outputdirectory "/home/jaxsonpd/Documents/flight-sim-hardware/sim-hardware/flight-sim-radio/Fab1/")
+			(outputdirectory "fab1/")
 		)
 	)
 	(net 0 "")
